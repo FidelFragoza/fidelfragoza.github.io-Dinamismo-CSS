@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    display: grid;
+
+}
+
+header {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    /* Usa un valor relativo o una unidad viewport para el padding */
+    padding: 1rem; /* Ejemplo con valor relativo */
+    /* O padding: 10vh; /* Ejemplo con unidad viewport */
+    background-color: #00ffd5c3;
+    border: 1px solid #000000;
+  
+    /* Media query para ajustar el padding en pantallas pequeñas */
+    @media only screen and (max-width: 600px) {
+      padding: 0.5rem; /* O padding: 5vh; */
+    }
+  }
+
+.article {
+    padding: 3%;
+    background-color: #f6f4f4bd;
+    
+    border: 1px solid #000000;
+    border-top: 0px;
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    
+    gap: 5%;
+
+    
+}
+
+
+.article_content {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin: 10px;
+}
+
+.article_content:hover {
+    transform: translateY(10px);
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+       
+    .titulo {
+        color: #ffa500;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .description_initial {
+        padding: 3%;
+        transition: all 1s ease-in-out;
+        color: black;
+    }
+}
+
+.article_content:not(:hover) {    
+    transform: translateY(0px);
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+       
+    .titulo {
+        color: #000000;
+        transition: all 1s ease-in-out;
+    }
+
+    .description_initial {
+        color: #f0f8ff;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.imagen {
+    max-width: 100%;
+    height: auto;
+    padding: 1px;
+    background-color: #f0f8ff;
+    border: 1px solid rgba(0, 0, 0, 0.523);
+    border-radius: 10px;
+}
+
+.description_initial {
+    padding: 3%;
+    color: #f0f8ff;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+    
+    /* Posición al final de la vista */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+@media only screen and (max-width:600px){
+    .article {
+        padding: 3%;
+        background-color: #f6f4f4bd;
+        
+        border: 1px solid #000000;
+        border-top: 0px;
+    
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        
+        
+        gap: 1px;
+    
+        
+    }
+    
+}
+
